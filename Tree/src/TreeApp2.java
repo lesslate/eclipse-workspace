@@ -5,17 +5,17 @@ class TreeApp2 {
 
 Tree theTree = new Tree();
 
-theTree.insert(50, 1.5);
-theTree.insert(25, 1.2);
-theTree.insert(75, 1.7);
-theTree.insert(12, 1.5);
-theTree.insert(37, 1.2);
-theTree.insert(43, 1.7);
-theTree.insert(30, 1.5);
-theTree.insert(33, 1.2);
-theTree.insert(87, 1.7);
-theTree.insert(93, 1.5);
-theTree.insert(97, 1.5);
+theTree.insert(50);
+theTree.insert(25);
+theTree.insert(75);
+theTree.insert(12);
+theTree.insert(37);
+theTree.insert(43);
+theTree.insert(30);
+theTree.insert(33);
+theTree.insert(87);
+theTree.insert(93);
+theTree.insert(97);
 
 theTree.traverse();
 	}

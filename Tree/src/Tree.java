@@ -6,11 +6,11 @@ class Tree
 	public Tree()
 	{root = null;}
 
-	public void insert(int id,double dd)
+	public void insert(int id)
 	{
 		Node newNode = new Node();
 		newNode.iData = id;
-		newNode.dData = dd;
+		
 		if(root==null)
 			root = newNode;
 		else
