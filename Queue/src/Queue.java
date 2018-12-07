@@ -4,42 +4,46 @@ public class Queue {
 	
 	private int maxSize;
 	private long[] queArray;
-	private int front;
-	private int rear;
 	private int nItems;
 //----------------------------
 	public Queue(int s)
 	{
 		maxSize= s;
 		queArray=new long[maxSize];
-		front = 0;
-		rear = -1;
+		
 		nItems = 0;
 		
 	}
 //----------------------------
-	public void insert(long j)
+	public void insert(long item)
 	{
-		if(rear == maxSize-1)
-			rear = -1;
-		queArray[++rear] = j;
-		nItems++;
+		int j;
+		if(nItems==0)
+			queArray[nItems++]=item;
+		else
+		{
+			for(j=nItems-1; j>=0; j--)
+			{
+				if(item>queArray[j])
+				queArray[j+1]=queArray[j];
+				else
+					break;
+			}
+			queArray[j+1]=item;
+			nItems++;
+		}
 	}
 //-------------------------------
 	public long remove()
 	{
-		long temp= queArray[front++];
-		if(front == maxSize)
-			front = 0;
-		nItems--;
-		return temp;
+		return queArray[--nItems];
 		
 	}
 
 //---------------------------
-	public long peekFront()
+	public long peekMin()
 	{
-		return queArray[front];
+		return queArray[nItems-1];
 	}
 //-----------------------------
 	public boolean isEmpty()

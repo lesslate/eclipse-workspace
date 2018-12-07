@@ -4,19 +4,19 @@ public class QueueApp {
 	public static void main(String[] args) {
 		Queue theQueue = new Queue(5);
 		
-		theQueue.insert(10);
-		theQueue.insert(20);
-		theQueue.insert(30);
-		theQueue.insert(40);
+		theQueue.insert(5);
+		theQueue.insert(4);
+		theQueue.insert(7);
+		theQueue.insert(2);
 		
 		theQueue.remove();
 		theQueue.remove();
 		theQueue.remove();
 		
-		theQueue.insert(50);
-		theQueue.insert(60);
-		theQueue.insert(70);
-		theQueue.insert(80);
+		theQueue.insert(3);
+		theQueue.insert(6);
+		theQueue.insert(1);
+		theQueue.insert(9);
 		
 		while(!theQueue.isEmpty())
 		{
